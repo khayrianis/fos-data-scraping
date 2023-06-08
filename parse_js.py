@@ -14,7 +14,7 @@ def parse_js(
 
     driver.get(url)
 
-    elements = driver.find_elements(By.CSS_SELECTOR, ".product-card__price")
+    elements = driver.find_elements(By.CSS_SELECTOR, ".primary")
     with open("parse_js.txt", "w") as file:
         for elt in elements:
             file.write(elt.text)
